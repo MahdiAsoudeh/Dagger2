@@ -3,8 +3,8 @@ package com.mahdi20.dagger2
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
 import com.mahdi20.dagger2.di.DaggerMahdiComponent
+import com.mahdi20.dagger2.bank.MellatApi
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,6 +21,13 @@ class MainActivity : AppCompatActivity() {
         Log.i("ZZZZZZZ", "$enc")
         Log.i("ZZZZZZZ", "$dyc")
         Log.i("ZZZZZZZ", "$aso")
+
+        /////////////////////////////////////////////////
+
+
+        var mellat: MellatApi = DaggerMahdiComponent.create().getMellatApi()
+        mellat.pay()
+
 
     }
 }
