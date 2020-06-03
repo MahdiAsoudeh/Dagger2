@@ -1,4 +1,4 @@
-package com.mahdi20.dagger2
+package com.mahdi20.dagger2.myClass
 
 import javax.inject.Inject
 
