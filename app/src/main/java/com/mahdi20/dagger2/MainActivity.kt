@@ -3,8 +3,8 @@ package com.mahdi20.dagger2
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.mahdi20.dagger2.di.DaggerMahdiComponent
 import com.mahdi20.dagger2.bank.MellatApi
+import com.mahdi20.dagger2.di.component.DaggerMahdiComponent
 
 class MainActivity : AppCompatActivity() {
 
