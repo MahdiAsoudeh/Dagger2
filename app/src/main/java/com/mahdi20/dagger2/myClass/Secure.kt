@@ -4,6 +4,6 @@ import javax.inject.Inject
 
 class Secure @Inject constructor() {
 
-    val KEY = "2020"
+    var KEY = "2020"
 
 }

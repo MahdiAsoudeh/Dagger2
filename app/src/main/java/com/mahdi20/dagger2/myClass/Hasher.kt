@@ -1,6 +1,8 @@
 package com.mahdi20.dagger2.myClass
 
 import android.util.Base64
+import android.util.Log
+import com.mahdi20.dagger2.di.qualifier.CustomSecure
 import javax.inject.Inject
 
 class Hasher @Inject constructor() {
@@ -13,16 +15,18 @@ class Hasher @Inject constructor() {
 
 
     fun encrypt(str: String): String {
+        Log.e("######" , "encrypt: ${secure.KEY}")
         return Base64.encodeToString(str.toByteArray(), Base64.DEFAULT)
     }
 
     fun dycrypt(str: String): String {
+//        Log.e("######" , "dycrypt: ${secure.KEY}")
         return String(Base64.decode(str, Base64.DEFAULT))
     }
 
 
     @Inject
-    fun secureInject(secure: Secure) {
+    fun secureInject(@CustomSecure secure: Secure) {
         this.secure = secure
     }
 
